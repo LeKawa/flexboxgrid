@@ -1,19 +1,43 @@
-.header {
-  text-align: center;
-  padding: 6rem 0;
-  background-color: #EAEAEA;
+body {
+  background-color: #FAD5CB;
+}
+
+.up-container {
   display: flex;
-  &-title {
-    font-size: 2.4rem;
-    @include for-size(tablet-portrait-up){
-      font-size: 3rem;
+
+  &__first {
+    background-color: red;
+    height: 10vh;
+    @include for-size (tablet-portrait-up) {
+      font-size: 24px;
+      height: 20vh;
+    }
+    @include for-size (big-desktop-up) {
+      height: 30vh;
     }
   }
 
-  &-subTitle {
-    font-size: 1.8rem;
-    @include for-size(tablet-portrait-up) {
-      font-size: 2.4rem;
+  &__second {
+    height: 20vh;
+    background-color: blue;
+    @include for-size (tablet-portrait-up) {
+      height: 50vh;
     }
+  }
+}
+
+.middle-container {
+  display: flex;
+
+
+  &__first {
+    position: relative;
+    margin-top: -5vh;
+    height: 30vh;
+    background-color: yellow;
+  }
+  &__second {
+    height: 20vh;
+    background-color: orange;
   }
 }
